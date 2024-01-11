@@ -1,0 +1,73 @@
+namespace is a collection of namespace
+it is mapping of every name you have defined to corresponding objects
+different namespace can coexist at a given time but are completely isolated
+namespace containing all the built in names is created when we start the py interpreter and exists as long as interpreter runs
+this is the reason that built in functions like id(), print() etc. are always available to us from any part of program
+each module creates its own global namespace
+
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+# Initialize an empty inventory dictionary
+inventory = []
+
+# Function to add items to the inventory
+def add_item(id, name, quantity, price):
+    item = {
+        'id': id,
+        'name': name,
+        'quantity': quantity,
+        'price': price
+    }
+    inventory.append(item)
+
+# Function to search for an item by ID
+def search_by_id(search_id):
+    for item in inventory:
+        if item['id'] == search_id:
+            return item
+    return None
+
+# Function to search for an item by name
+def search_by_name(search_name):
+    for item in inventory:
+        if item['name'] == search_name:
+            return item
+    return None
+
+# Function to display item details
+def display_item(item):
+    if item:
+        print(f"Item ID: {item['id']}")
+        print(f"Item Name: {item['name']}")
+        print(f"Quantity: {item['quantity']}")
+        print(f"Price: {item['price']}")
+    else:
+        print("Item not available.")
+
+# Sample data
+add_item(1, 'Laptop', 5, 800)
+add_item(2, 'Mouse', 10, 20)
+add_item(3, 'Keyboard', 8, 50)
+
+# Main loop to interact with the user
+while True:
+    print("\n1. Search by ID")
+    print("2. Search by Name")
+    print("3. Exit")
+
+    choice = input("Enter your choice (1/2/3): ")
+
+    if choice == '1':
+        search_id = int(input("Enter item ID to search: "))
+        item = search_by_id(search_id)
+        display_item(item)
+    elif choice == '2':
+        search_name = input("Enter item name to search: ")
+        item = search_by_name(search_name)
+        display_item(item)
+    elif choice == '3':
+        print("Exiting the program. Goodbye!")
+        break
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")

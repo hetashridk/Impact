@@ -1,0 +1,68 @@
+Python name is inspired by the show "Monty Python's Flying Circus"
+It is made as a hobby
+invented in 1989
+implementated in Netherland
+invented by guido van rossum
+
+python compiler produces byte code (extension=> .cpython)
+
+python 2 ended in 1st jan 2020
+
+
+speed of exceution in decending order
+c,pypy,cpython
+
+PyPy constains JITC
+
+14 datatypes
+categories into 6 category:- numeric, boolean, sequence, set, mapping, none
+numeric:- int, float, complex - immutable
+boleans:- bool
+sequence:- str (immutable), list, bytes, bytearray, tuple, range 
+set:- set, frozen set
+mapping:- dict
+none:- None
+
+datatypes are dynamic and unbounded
+size of data type is dynamically managed
+pypy
+
+
+python starts with intial size for a variable and then we cam increase it
+
+intial size is 24 bytes (int)
+
+
+to check the size we need to import the sys
+import sys
+sys.getsizeof(0) 
+
+to convert number of binary we will write in prefix as 0b or 0B
+h = 0b101 => o/p:- 5
+h = 101 => o/p:- 101
+
+to convert number of octal we will write in prefix as 0o or 0O
+
+to convert number of hexdecimal we will write in prefix as 0x or 0X
+
+binary to octal, decimal, hexdecimal
+bin()
+bin(25) => otp:- 0b11001
+bin(0o25) => otp:- 0b10101
+
+same as oct(), 
+
+
+
+options=> inventory => 1
+inventory is stock => item no, name, quantity
+
+searchbyId => 101 eg =>print rice => 500kg, 50 inr  else print not available
+searchbyname => 101 eg => id => 500kg, 50 inr else print not available
+
+by from vendor =>check item id, name, quantity, net price
+
+sale the item for customer=> ask quantity 
+
+stop
+
